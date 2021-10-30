@@ -3,7 +3,7 @@ LABEL Description="rtems5 SPARC tool set"
 ENV TERM linux
 
 RUN cd /usr/src && \
-    git clone --depth 1 git://git.rtems.org/rtems-source-builder.git rsb && \
+    git clone --branch 5 --depth 1 git://git.rtems.org/rtems-source-builder.git rsb && \
     cd /usr/src/rsb && \
     ./source-builder/sb-check && \
     cd /usr/src/rsb/rtems && \

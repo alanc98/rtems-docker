@@ -3,7 +3,7 @@ LABEL Description="rtems5 Raspberry Pi bsp"
 ENV TERM linux
 
 RUN cd /usr/src && \
-    git clone --depth 1 git://git.rtems.org/rtems.git rtems && \
+    git clone --branch 5 --depth 1 git://git.rtems.org/rtems.git rtems && \
     cd rtems && \
     ./bootstrap && \
     cd .. && \
