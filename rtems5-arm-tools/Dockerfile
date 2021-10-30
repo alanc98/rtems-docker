@@ -1,4 +1,4 @@
-FROM cfe-build-essential:latest AS build
+FROM rtems-essential:latest AS build
 LABEL Description="rtems5 ARM tool set"
 ENV TERM linux
 
