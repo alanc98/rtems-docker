@@ -1,4 +1,4 @@
-FROM cfe-build-essential:latest AS build
+FROM rtems-essential:latest AS build
 LABEL Description="rtems4.11 i386 basic tool set"
 ENV TERM linux
 
