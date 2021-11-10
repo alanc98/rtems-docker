@@ -1,5 +1,5 @@
-FROM cfe-build-essential:latest AS build
-LABEL Description="rtems5 SPARC tool set"
+FROM rtems6-essential:latest AS build
+LABEL Description="rtems6 SPARC toolchain"
 ENV TERM linux
 
 RUN cd /usr/src && \
@@ -7,9 +7,9 @@ RUN cd /usr/src && \
     cd /usr/src/rsb && \
     ./source-builder/sb-check && \
     cd /usr/src/rsb/rtems && \
-    ../source-builder/sb-set-builder --prefix=/opt/rtems5 5/rtems-sparc && \
+    ../source-builder/sb-set-builder --prefix=/opt/rtems6 6/rtems-sparc && \
     cd /usr/src && \
     rm -rf rsb
 
-ENV PATH="/opt/rtems5/bin:${PATH}"
+ENV PATH="/opt/rtems6/bin:${PATH}"
 
