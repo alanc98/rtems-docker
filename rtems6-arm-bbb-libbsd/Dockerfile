@@ -1,5 +1,5 @@
-FROM rtems5-arm-bbb:latest AS build
-LABEL Description="rtems5 bbb libbsd"
+FROM rtems6-arm-bbb:latest AS build
+LABEL Description="rtems6 bbb libbsd"
 ENV TERM linux
 
 RUN cd /usr/src && \
@@ -7,8 +7,8 @@ RUN cd /usr/src && \
     cd rtems-libbsd && \
     git submodule init && \
     git submodule update && \
-    ./waf configure --prefix="/opt/rtems5" \
-    --rtems-tools="/opt/rtems5" \
+    ./waf configure --prefix="/opt/rtems6" \
+    --rtems-tools="/opt/rtems6" \
     --rtems-bsps=arm/beagleboneblack \
     --buildset=buildset/default.ini && \
     ./waf && \
