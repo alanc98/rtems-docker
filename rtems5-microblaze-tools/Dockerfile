@@ -1,5 +1,5 @@
 FROM rtems5-essential:latest AS build
-LABEL Description="rtems5 SPARC tool chain"
+LABEL Description="rtems5 Microblaze tool chain"
 ENV TERM linux
 
 RUN cd /usr/src && \
@@ -7,7 +7,7 @@ RUN cd /usr/src && \
     cd /usr/src/rsb && \
     ./source-builder/sb-check && \
     cd /usr/src/rsb/rtems && \
-    ../source-builder/sb-set-builder --prefix=/opt/rtems5 5/rtems-sparc && \
+    ../source-builder/sb-set-builder --prefix=/opt/rtems5 5/rtems-microblaze && \
     cd /usr/src && \
     rm -rf rsb
 

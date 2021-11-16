@@ -1,5 +1,5 @@
 FROM ubuntu:20.04
-LABEL Description="RTEMS base build image"
+LABEL Description="RTEMS 5 base build image"
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM linux
 
