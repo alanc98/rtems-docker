@@ -1,4 +1,4 @@
-FROM rtems6-essential:latest AS build
+FROM rtems6-qemu-xilinx:latest AS build
 LABEL Description="rtems5 Microblaze tool chain"
 ENV TERM linux
 
