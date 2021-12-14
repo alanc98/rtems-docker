@@ -3,7 +3,7 @@ LABEL Description="rtems6 bbb libbsd"
 ENV TERM linux
 
 RUN cd /usr/src && \
-    git clone git://git.rtems.org/rtems-libbsd.git rtems-libbsd && \
+    git clone git://git.rtems.org/rtems-libbsd.git -b 6-freebsd-12 rtems-libbsd && \
     cd rtems-libbsd && \
     git submodule init && \
     git submodule update && \
